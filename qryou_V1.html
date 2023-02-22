@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Profile</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			background-color: #f2f2f2;
+			padding: 20px;
+		}
+		.card {
+			margin: 20px;
+			padding: 20px;
+			background-color: white;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+			border-radius: 5px;
+			width: 360px;
+		}
+		.card img {
+			width: 50%;
+			border-radius: 5px;
+			margin: auto;
+		}
+		.card h2 {
+			font-size: 24px;
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+		.card h3 {
+			font-size: 18px;
+			margin-top: 10px;
+			margin-bottom: 5px;
+		}
+		.card p {
+			font-size: 16px;
+			margin: 0;
+		}
+		.card iframe {
+			width: 100%;
+			height: 200px;
+			border: none;
+			margin-top: 10px;
+			border-radius: 5px;
+		}
+	</style>
+	<script type="text/javascript">
+	$(document).ready(function() {
+var employeeList = [
+	{
+		name: "Dr Sandra Hastie",
+		imageUrl: "https://rangiruru.school.nz/content/uploads/2022/06/RR-Sandra-3000x1500pxH-scaled.jpg",
+		favoriteFood: "Pizza",
+		favoriteSong: "Bohemian Rhapsody",
+		favoriteHolidayDestination: "Hawaii",
+		favoriteChildhoodMemory: "Riding my bike with my friends",
+		favoriteVideoUrl: "https://www.youtube.com/embed/1xEmlULekX0"
+	},
+	{
+		name: "Juliet Collins",
+		imageUrl: "https://assets.isu.pub/document-structure/210113215609-4975cec15bfa3bc7c4f3b521e9718b9e/v1/846139cfa7d6eb86bdde63a8c6f16b25.jpg",
+		favoriteFood: "Sushi",
+		favoriteSong: "Shape of You",
+		favoriteHolidayDestination: "Bali",
+		favoriteChildhoodMemory: "Playing with my dog",
+		favoriteVideoUrl: "https://www.youtube.com/embed/vpZ1kyt1MlE"
+	},
+	{
+		name: "Stu Munro",
+		imageUrl: "https://rangiruru.school.nz/content/uploads/2021/02/Stuart-Munro-resized-750x480.png",
+		favoriteFood: "BBQ ribs",
+		favoriteSong: "Hotel California",
+		favoriteHolidayDestination: "Australia",
+		favoriteChildhoodMemory: "Fishing with my grandfather",
+		favoriteVideoUrl: "https://www.youtube.com/embed/8Sj2tbh-ozE"
+	}
+];
+
+var randomEmployee = employeeList[Math.floor(Math.random() * employeeList.length)];
+$("#name").text(randomEmployee.name);
+$("#image").attr("src", randomEmployee.imageUrl);
+$("#favorite-food").text(randomEmployee.favoriteFood);
+$("#favorite-song").text(randomEmployee.favoriteSong);
+$("#favorite-destination").text(randomEmployee.favoriteHolidayDestination);
+$("#favorite-memory").text(randomEmployee.favoriteChildhoodMemory);
+$("#favorite-video").attr("src", randomEmployee.favoriteVideoUrl);
+});
+
+	</script>
+</head>
+<body>
+	<h1>QR You @ Rangi Ruru</h1>
+	<div class="container">
+<div class="card">
+<img id="image" src="" alt="Employee image">
+<h2 id="name"></h2>
+<h3>Favorite food:</h3>
+<p id="favorite-food"></p>
+<h3>Favorite song:</h3>
+<p id="favorite-song"></p>
+<h3>Favorite holiday destination:</h3>
+<p id="favorite-destination"></p>
+<h3>Favorite childhood memory:</h3>
+<p id="favorite-memory"></p>
+<h3>Favorite video:</h3>
+<iframe id="favorite-video" src="" allowfullscreen></iframe>
+</div>
+</div>
+
+</body>
+</html>
